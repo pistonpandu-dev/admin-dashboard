@@ -12,7 +12,7 @@ export default function Error({
   reset: () => void
 }) {
   useEffect(() => {
-    console.error(error)
+    console.error('Application error:', error)
   }, [error])
 
   return (
@@ -22,7 +22,7 @@ export default function Error({
           <AlertCircle className="h-8 w-8 text-destructive" />
         </div>
         <h2 className="text-2xl font-bold">Something went wrong!</h2>
-        <p className="text-center text-muted-foreground">
+        <p className="text-center text-muted-foreground max-w-md">
           {error.message || 'An unexpected error occurred'}
         </p>
         <Button onClick={reset}>Try again</Button>
