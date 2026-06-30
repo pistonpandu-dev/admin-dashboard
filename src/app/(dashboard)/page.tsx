@@ -16,6 +16,7 @@ import {
   Activity,
   Signal,
 } from 'lucide-react'
+import { cn } from '@/lib/utils'
 
 export default function DashboardPage() {
   const { devices, stats, isLoading } = useDevices()
