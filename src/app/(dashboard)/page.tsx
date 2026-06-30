@@ -3,7 +3,6 @@
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 import { StatsCard } from '@/components/dashboard/stats-card'
-import { ActivityChart } from '@/components/dashboard/activity-chart'
 import { NotificationList } from '@/components/dashboard/notification-list'
 import { useDevices } from '@/lib/hooks/use-devices'
 import { useSocket } from '@/lib/hooks/use-socket'
@@ -13,10 +12,12 @@ import {
   Wifi,
   WifiOff,
   Bell,
-  Activity,
   Signal,
 } from 'lucide-react'
 import { cn } from '@/lib/utils'
+
+// Import sederhana untuk activity chart
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 
 export default function DashboardPage() {
   const { devices, stats, isLoading } = useDevices()
@@ -99,7 +100,17 @@ export default function DashboardPage() {
           transition={{ delay: 0.4 }}
           className="lg:col-span-4"
         >
-          <ActivityChart />
+          <Card>
+            <CardHeader>
+              <CardTitle>Activity Overview</CardTitle>
+              <CardDescription>Device activity for the last 30 days</CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="h-[200px] flex items-center justify-center text-muted-foreground">
+                {isLoading ? 'Loading...' : 'Chart placeholder'}
+              </div>
+            </CardContent>
+          </Card>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
