@@ -15,10 +15,7 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  experimental: {
-    // Tambahkan ini untuk mengatasi masalah page data
-    optimizeCss: true,
-  },
+  // Hapus experimental.optimizeCss
   env: {
     NEXT_PUBLIC_BASE_API_URL: process.env.NEXT_PUBLIC_BASE_API_URL,
     NEXT_PUBLIC_SOCKET_URL: process.env.NEXT_PUBLIC_SOCKET_URL,
