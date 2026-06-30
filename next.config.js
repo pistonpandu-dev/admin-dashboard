@@ -13,10 +13,7 @@ const nextConfig = {
     NEXT_PUBLIC_BASE_API_URL: process.env.NEXT_PUBLIC_BASE_API_URL,
     NEXT_PUBLIC_SOCKET_URL: process.env.NEXT_PUBLIC_SOCKET_URL,
   },
-  experimental: {
-    serverActions: true,
-  },
-  // Node.js 24 compatibility
+  // Hapus experimental.serverActions karena sudah default
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback = {
