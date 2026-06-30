@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import { Button } from '@/components/ui/button'
 import { Home, AlertCircle } from 'lucide-react'
@@ -12,7 +10,7 @@ export default function NotFound() {
           <AlertCircle className="h-8 w-8 text-muted-foreground" />
         </div>
         <h2 className="text-2xl font-bold">Page Not Found</h2>
-        <p className="text-center text-muted-foreground">
+        <p className="text-center text-muted-foreground max-w-md">
           The page you are looking for doesn't exist or has been moved.
         </p>
         <Button asChild>
