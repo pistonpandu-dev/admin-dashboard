@@ -15,7 +15,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Hapus experimental.optimizeCss
+  // Exclude _not-found from static generation
+  generateStaticParams: async () => {
+    return []
+  },
   env: {
     NEXT_PUBLIC_BASE_API_URL: process.env.NEXT_PUBLIC_BASE_API_URL,
     NEXT_PUBLIC_SOCKET_URL: process.env.NEXT_PUBLIC_SOCKET_URL,
