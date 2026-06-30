@@ -47,7 +47,6 @@
     "@radix-ui/react-popover": "1.0.7",
     "@radix-ui/react-aspect-ratio": "1.0.3",
     "@radix-ui/react-accordion": "1.1.2",
-    "@radix-ui/react-breadcrumb": "1.0.0",
     "class-variance-authority": "0.7.0",
     "clsx": "2.0.0",
     "lucide-react": "0.294.0",
@@ -86,7 +85,6 @@
     "next": "14.0.4"
   },
   "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
+    "node": "18.x"
   }
 }
