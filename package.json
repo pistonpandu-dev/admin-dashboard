@@ -73,5 +73,9 @@
     "eslint": "^8.55.0",
     "eslint-config-next": "14.2.5",
     "tailwindcss-animate": "^1.0.7"
+  },
+  "overrides": {
+    "react": "$react",
+    "react-dom": "$react-dom"
   }
 }
