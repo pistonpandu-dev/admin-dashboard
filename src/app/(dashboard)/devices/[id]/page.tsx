@@ -12,9 +12,10 @@ import Link from 'next/link'
 export default function DeviceDetailPage() {
   const params = useParams()
   const id = params.id as string
-  const { getDevice } = useDevices()
+  const { devices, isLoading } = useDevices()
   
-  const { data: device, isLoading } = getDevice
+  // Cari device dari data yang sudah ada
+  const device = devices?.find(d => d.id === id)
 
   if (isLoading) {
     return (
