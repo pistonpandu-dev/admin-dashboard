@@ -12,10 +12,10 @@ import {
   Battery,
   HardDrive,
   MemoryStick,
-  Android,
+  // Hapus Android, ganti dengan:
+  Monitor,
   Network,
   Clock,
-  QrCode,
 } from 'lucide-react'
 
 interface DeviceDetailProps {
@@ -52,7 +52,7 @@ export function DeviceDetail({ device }: DeviceDetailProps) {
                 <p className="text-sm text-muted-foreground">Status</p>
                 <Badge
                   variant={
-                    device.status === 'online' ? 'success' : 'destructive'
+                    device.status === 'online' ? 'default' : 'destructive'
                   }
                   className="capitalize"
                 >
@@ -137,7 +137,7 @@ export function DeviceDetail({ device }: DeviceDetailProps) {
 
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <Android className="h-4 w-4" />
+                <Monitor className="h-4 w-4" />
                 <span className="text-sm font-medium">Android Version</span>
               </div>
               <p className="text-sm">{device.androidVersion}</p>
